@@ -1,0 +1,48 @@
+# North Installasjon
+
+> North Installasjon AS er et autorisert elektroinstallasjonsforetak i Oslo som leverer elektrotjenester til privatkunder, bedrifter, borettslag og entreprenører. Selskapet er en del av North Group, har over 50 sertifiserte elektrikere, og er medlem av NHO Elektro. Alle oppdrag inkluderer samsvarserklæring og FDV-dokumentasjon.
+
+North Installasjon tilbyr alt innen elektrisk installasjon, vedlikehold og oppgradering. Selskapet har erfaring fra en rekke store prosjekter, deriblant Nye Regjeringskvartalet. Ingen jobber er for små eller for store. Selskapets tre kjerneverdier er pålitelighet, fremdrift og lojalitet.
+
+Kontakt: 749 99 333 | post@northinstallasjon.no | Oslo-området (inkl. Bærum, Asker, Lillestrøm, Drammen)
+
+## Tjenester
+
+- [Service og feilsøking](/tjenester): Elektriske problemer, feilsøking og reparasjon for privat og bedrift
+- [Elbillader](/tjenester): Installasjon av ladepunkt hjemme, i borettslag og næring (Easee, Zaptec, Garo)
+- [Sikringsskap og el-tavle](/tjenester): Bytte og oppgradering fra skrusikringer til moderne automatskap
+- [Smarthus](/tjenester): Smart strømstyring, dimmere og automatiserte løsninger
+- [Oppussing elektriker](/tjenester): Elektrisk arbeid ved bad- og kjøkkenoppussing
+- [Elkontroll](/tjenester): Kontroll av bolig eller borettslag med dokumentasjon og forsikringsrabatt
+- [Termografering](/tjenester): Varmekamera-inspeksjon for å oppdage feil i el-anlegg
+- [Nybygg og entrepriser](/tjenester): Komplette elektriske anlegg for nye bygg og større prosjekter
+- [Restaurant og næring](/tjenester): Elektrisk anlegg for storkjøkken og serveringsbedrifter
+- [Døgnvakt](/tjenester): Hasteoppdrag og akutt elektrikerhjelp døgnet rundt
+
+## Sider
+
+- [Forside](/): Hjemmeside med oversikt, kundeomtaler og kontakt
+- [Tjenester](/tjenester): Alle elektrikertjenester for privat, bedrift og borettslag
+- [Prosjekter](/prosjekter): Referanser og gjennomførte prosjekter fra private boliger til næringsbygg
+- [Om oss](/om-oss): Om North Group, verdiene og teamet bak
+- [Blogg](/blogg): Fagartikler om elektriker, priser, regler og smarthus
+- [Priskalkulator](/kalkulator): Beregn pris på elektrikerarbeid på nett
+- [Kontakt](/kontakt): Kontaktskjema, telefon og adresse
+
+## Blogg
+
+- [Elektriker pris per time 2026](/blogg/elektriker-pris-per-time-2026): Timepriser og tips for å spare
+- [Jordfeilbryter](/blogg/jordfeilbryter-hva-og-hvorfor): Hva det er og hvorfor du trenger det
+- [Nye regler elbillading](/blogg/nye-regler-elbillading-stikkontakt): NEK 400:2022 og stikkontakt-forbudet
+- [Samsvarserklæring og Boligmappa](/blogg/samsvarserklaering-boligmappa): Slik dokumenterer du elektrisk arbeid
+- [Easee vs Zaptec vs Garo](/blogg/easee-zaptec-garo-velg-elbillader): Sammenligning av elbilladere
+- [Elbillader i borettslag](/blogg/elbillader-borettslag-regler): Regler, rettigheter og kostnader
+- [Bytte sikringsskap](/blogg/hva-koster-bytte-sikringsskap): Priser og hva som inngår
+- [Solceller og el-tavle](/blogg/solceller-ny-el-tavle): Slik oppgraderer du for solenergi
+- [Smarthus](/blogg/smarthus-elektriker-selv): Hva krever elektriker og hva kan du gjøre selv?
+- [Enova-støtte](/blogg/enova-stoette-smarthus): Støtte til smart strømstyring i 2026
+- [Elkontroll bolig](/blogg/elkontroll-bolig-pris-og-hva-sjekkes): Hva som sjekkes og hvor ofte
+- [Halvparten av boliger har feil](/blogg/halvparten-norske-boliger-feil-elektrisk): DSB-statistikk og hva du kan gjøre
+- [Sikringen går stadig](/blogg/sikringen-gaar-stadig-aarsaker): Årsaker og løsninger
+- [Termografering](/blogg/termografering-el-anlegg): Varmekamera for sikkerhetssjekk
+- [Elektriker ved badoppussing](/blogg/elektriker-oppussing-bad-oslo): Krav og planlegging

@@ -1,0 +1,5 @@
+# Test og logging skal ikke med i deploy
+playwright-report/
+test-results/
+tests/
+logs/
