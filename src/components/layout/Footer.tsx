@@ -94,11 +94,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/tjenester/dognvakt" className="hover:text-white transition-colors">
-                  Døgnvakt
-                </Link>
-              </li>
-              <li>
                 <Link href="/tjenester/hasteoppdrag" className="hover:text-white transition-colors">
                   Hasteoppdrag
                 </Link>

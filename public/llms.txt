@@ -17,7 +17,7 @@ Kontakt: 749 99 333 | post@northinstallasjon.no | Oslo-området (inkl. Bærum, A
 - [Termografering](/tjenester): Varmekamera-inspeksjon for å oppdage feil i el-anlegg
 - [Nybygg og entrepriser](/tjenester): Komplette elektriske anlegg for nye bygg og større prosjekter
 - [Restaurant og næring](/tjenester): Elektrisk anlegg for storkjøkken og serveringsbedrifter
-- [Døgnvakt](/tjenester): Hasteoppdrag og akutt elektrikerhjelp døgnet rundt
+- [Hasteoppdrag](/tjenester/hasteoppdrag): Rask respons på akutt elektrikerhjelp
 
 ## Sider
 

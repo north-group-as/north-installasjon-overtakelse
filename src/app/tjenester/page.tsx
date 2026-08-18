@@ -87,16 +87,6 @@ const services = [
     imageAlt: "North Installasjon elektrikerbil i Oslo-området",
   },
   {
-    title: "Døgnvakt",
-    description:
-      "Akutt elektriker i Oslo med prioritering av hasteoppdrag. Kontakt oss for rask hjelp.",
-    href: "/tjenester/dognvakt",
-    icon: Clock,
-    image: "/images/dognvakt-north-bil-brandet.webp",
-    imageAlt: "North Installasjon elektrikerbil på vei til døgnvakt og hasteoppdrag",
-    imageLabel: "24/7 døgnvakt",
-  },
-  {
     title: "Hasteoppdrag",
     description:
       "Hastende elektriker med rask respons. Vi stiller opp når du trenger det mest.",
@@ -298,8 +288,8 @@ export default function TjenesterPage() {
                 <h3 className="text-lg font-bold text-navy-dark">Rask responstid</h3>
               </div>
               <p className="text-navy-dark/70 text-[15px] leading-relaxed">
-                Vi prioriterer hasteoppdrag og er på plass så snart som mulig.
-                Med døgnvakt sikrer vi at du får hjelp når du trenger det som mest.
+                Vi prioriterer hasteoppdrag og er på plass så snart som mulig,
+                slik at du får hjelp når du trenger det som mest.
               </p>
             </div>
             <div>

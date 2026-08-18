@@ -42,7 +42,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/tjenester/borettslag-og-sameie`, lastModified: staticLastMod },
     { url: `${baseUrl}/tjenester/nybygg`, lastModified: staticLastMod },
     { url: `${baseUrl}/tjenester/hasteoppdrag`, lastModified: staticLastMod },
-    { url: `${baseUrl}/tjenester/dognvakt`, lastModified: staticLastMod },
     { url: `${baseUrl}/tjenester/pris`, lastModified: staticLastMod },
     { url: `${baseUrl}/blogg`, lastModified: staticLastMod },
     { url: `${baseUrl}/sammenlign`, lastModified: staticLastMod },
