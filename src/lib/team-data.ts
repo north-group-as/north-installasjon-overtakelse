@@ -32,7 +32,7 @@ export const teamMembers: TeamMember[] = [
     slug: "martin-iversen",
     role: "Faglig ansvarlig",
     image: "/images/team/martin-iversen.webp",
-    email: "",
+    email: "martin@northinstallasjon.no",
     phone: "",
     bio: "Martin Ekholdt Iversen er faglig ansvarlig i North Installasjon. Han er utdannet elektriker, har teknisk fagskole innen elkraft og fullførte installatørutdanningen i 2024. Med erfaring som montør, serviceleder og faglig ansvarlig har Martin opparbeidet seg solid kompetanse innen både praktisk utførelse, prosjektoppfølging og faglig ledelse. Han sørger for at arbeidet vårt holder høy kvalitet, gjennomføres på en trygg måte og er i samsvar med gjeldende regelverk.",
   },
