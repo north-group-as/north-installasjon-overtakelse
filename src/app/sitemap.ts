@@ -2,7 +2,6 @@ import type { MetadataRoute } from "next";
 import { projects } from "@/lib/projects-data";
 import { getAllPosts } from "@/lib/blog";
 import { getAllComparisons } from "@/lib/comparisons";
-import { getAllCourses } from "@/lib/courses-data";
 import { getAllLocationSlugs } from "@/lib/locations-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -45,7 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/tjenester/pris`, lastModified: staticLastMod },
     { url: `${baseUrl}/blogg`, lastModified: staticLastMod },
     { url: `${baseUrl}/sammenlign`, lastModified: staticLastMod },
-    { url: `${baseUrl}/kurs`, lastModified: staticLastMod },
     { url: `${baseUrl}/vilkar`, lastModified: staticLastMod },
     { url: `${baseUrl}/anmeldelser`, lastModified: staticLastMod },
     { url: `${baseUrl}/faq`, lastModified: staticLastMod },
@@ -53,10 +51,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...projectUrls,
     ...blogUrls,
     ...comparisonUrls,
-    ...getAllCourses().map((c) => ({
-      url: `${baseUrl}/kurs/${c.slug}`,
-      lastModified: staticLastMod,
-    })),
     ...getAllLocationSlugs().map((slug) => ({
       url: `${baseUrl}/elektriker/${slug}`,
       lastModified: staticLastMod,

@@ -127,11 +127,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/kurs" className="hover:text-white transition-colors">
-                  Kurs og sertifisering
-                </Link>
-              </li>
-              <li>
                 <Link href="/prosjekter" className="hover:text-white transition-colors">
                   Prosjekter
                 </Link>

@@ -9,7 +9,6 @@ import { BUSINESS } from "@/lib/business-data";
 const navLinks = [
   { label: "Tjenester", href: "/tjenester" },
   { label: "Prosjekter", href: "/prosjekter" },
-  { label: "Kurs", href: "/kurs" },
   { label: "Jobb med oss", href: "/jobb-med-oss" },
   { label: "Kalkulator", href: "/kalkulator" },
   { label: "Om oss", href: "/om-oss" },
