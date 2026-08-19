@@ -8,10 +8,10 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-elektriker.webp"
-          alt="Elektriker i arbeid"
-          width={1920}
-          height={1080}
+          src="/images/fjell-vinter.webp"
+          alt="Snødekte fjell i Norge"
+          width={1410}
+          height={2250}
           className="absolute inset-0 w-full h-full object-cover"
           priority
           quality={90}
