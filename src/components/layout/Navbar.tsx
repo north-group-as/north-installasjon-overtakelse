@@ -62,16 +62,11 @@ export default function Navbar() {
             ))}
             <a
               href={BUSINESS.phoneHref}
-              aria-label={`Ring ${BUSINESS.phoneDisplay}, ${BUSINESS.phoneInstruction}`}
+              aria-label={`Ring ${BUSINESS.phoneDisplay}`}
               className="flex items-center gap-2.5 bg-green text-white px-5 py-2 rounded-full shadow-lg shadow-green/25 hover:bg-green-dark hover:shadow-green/40 transition-all"
             >
               <Phone className="w-5 h-5" />
-              <span className="flex flex-col items-start leading-none">
-                <span className="text-[10px] font-semibold uppercase tracking-wider text-white/80">
-                  {BUSINESS.phoneInstruction}
-                </span>
-                <span className="font-extrabold text-lg">{BUSINESS.phoneDisplay}</span>
-              </span>
+              <span className="font-extrabold text-lg">{BUSINESS.phoneDisplay}</span>
             </a>
             <Link
               href="/kontakt"
@@ -118,16 +113,11 @@ export default function Navbar() {
         <div className="mx-8 mt-4 pt-4 border-t border-white/10 flex flex-col gap-3">
           <a
             href={BUSINESS.phoneHref}
-            aria-label={`Ring ${BUSINESS.phoneDisplay}, ${BUSINESS.phoneInstruction}`}
+            aria-label={`Ring ${BUSINESS.phoneDisplay}`}
             className="flex items-center gap-2 text-green font-semibold"
           >
             <Phone className="w-5 h-5" />
-            <span className="flex flex-col leading-tight">
-              <span className="text-[11px] font-semibold uppercase tracking-wide text-green/80">
-                {BUSINESS.phoneInstruction}
-              </span>
-              <span className="text-lg">{BUSINESS.phoneDisplay}</span>
-            </span>
+            <span className="text-lg">{BUSINESS.phoneDisplay}</span>
           </a>
         </div>
 
