@@ -127,14 +127,6 @@ const websiteJsonLd = {
   "@type": "WebSite",
   name: "North Installasjon",
   url: "https://www.northinstallasjon.no",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://www.northinstallasjon.no/blogg?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
 };
 
 export default function RootLayout({

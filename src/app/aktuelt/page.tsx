@@ -86,7 +86,6 @@ function NewsCard({ item }: { item: NewsItem }) {
 
 export default function AktueltPage() {
   const items = getAllNewsItems();
-  const northItems = items.filter((item) => item.kind === "north").length;
   const industryItems = items.filter((item) => item.kind === "bransje").length;
 
   return (
@@ -100,17 +99,12 @@ export default function AktueltPage() {
               Aktuelt og nyheter
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-gray-50/75">
-              Egne saker fra North Installasjon og relevante bransjeoppdateringer
-              for boliger, borettslag og bedrifter som vil ta bedre valg om
-              elektriske anlegg.
+              Relevante bransjeoppdateringer for boliger, borettslag og
+              bedrifter som vil ta bedre valg om elektriske anlegg.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:max-w-2xl">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <p className="text-3xl font-bold text-white">{northItems}</p>
-              <p className="mt-1 text-sm text-gray-50/65">Egne North-saker</p>
-            </div>
+          <div className="mt-10 max-w-xs">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
               <p className="text-3xl font-bold text-white">{industryItems}</p>
               <p className="mt-1 text-sm text-gray-50/65">Bransjeoppdateringer</p>

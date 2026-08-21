@@ -2,11 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { BUSINESS } from "@/lib/business-data";
-import { getAllPosts } from "@/lib/blog";
 import AuroraBackground from "@/components/ui/AuroraBackground";
 
 export default function Footer() {
-  const recentPosts = getAllPosts().slice(0, 5);
   return (
     <footer className="relative overflow-hidden bg-navy-dark">
       <AuroraBackground overlay intensity="whisper" />
@@ -137,11 +135,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blogg" className="hover:text-white transition-colors">
-                  Blogg
-                </Link>
-              </li>
-              <li>
                 <Link href="/kontakt" className="hover:text-white transition-colors">
                   Kontakt oss
                 </Link>
@@ -190,22 +183,6 @@ export default function Footer() {
                   Logg inn
                 </a>
               </li>
-            </ul>
-
-            <p className="text-sm font-semibold text-white uppercase tracking-wider mt-8 mb-4">
-              Fagartikler
-            </p>
-            <ul className="space-y-2.5 text-sm text-white/65">
-              {recentPosts.map((post) => (
-                <li key={post.slug}>
-                  <Link
-                    href={`/blogg/${post.slug}`}
-                    className="hover:text-white transition-colors line-clamp-2"
-                  >
-                    {post.title}
-                  </Link>
-                </li>
-              ))}
             </ul>
           </div>
         </div>

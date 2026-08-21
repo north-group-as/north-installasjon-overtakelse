@@ -1,6 +1,4 @@
-import { getAllPosts } from "@/lib/blog";
-
-export type NewsKind = "north" | "bransje";
+export type NewsKind = "bransje";
 
 export interface NewsItem {
   id: string;
@@ -13,13 +11,6 @@ export interface NewsItem {
   cta: string;
   image?: string;
 }
-
-const selectedNorthSlugs = [
-  "elbillader-pris-hjemme",
-  "sikringsskap-1970-tallet-fare",
-  "elkontroll-bolig-pris-og-hva-sjekkes",
-  "smarthus-enkle-grep",
-];
 
 const industryItems: NewsItem[] = [
   {
@@ -61,25 +52,7 @@ const industryItems: NewsItem[] = [
 ];
 
 export function getAllNewsItems(): NewsItem[] {
-  const posts = getAllPosts();
-  const postsBySlug = new Map(posts.map((post) => [post.slug, post]));
-
-  const northItems = selectedNorthSlugs
-    .map((slug) => postsBySlug.get(slug))
-    .filter((post): post is NonNullable<typeof post> => Boolean(post))
-    .map((post) => ({
-      id: post.slug,
-      title: post.title,
-      description: post.description,
-      date: post.date,
-      kind: "north" as const,
-      source: "North Installasjon",
-      href: `/blogg/${post.slug}`,
-      cta: "Les saken",
-      image: post.image,
-    }));
-
-  return [...industryItems, ...northItems].sort(
+  return [...industryItems].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 }

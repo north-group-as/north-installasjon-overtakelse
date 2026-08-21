@@ -42,7 +42,7 @@ const categories = [
         question: "Hva koster det å bytte sikringsskap?",
         answer:
           "Bytte av sikringsskap til moderne el-tavle koster normalt mellom 8 000 og 25 000 kr ekskl. mva, avhengig av størrelse, antall kurser og kompleksitet. Prisen inkluderer materiell, arbeid og samsvarserklæring.",
-        links: [{ label: "Les mer om priser", href: "/blogg" }],
+        links: [{ label: "Les mer om priser", href: "/tjenester/pris" }],
       },
     ],
   },

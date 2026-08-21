@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/lib/projects-data";
-import { getAllPosts } from "@/lib/blog";
 import { getAllComparisons } from "@/lib/comparisons";
 import { getAllLocationSlugs } from "@/lib/locations-data";
 
@@ -11,11 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const projectUrls: MetadataRoute.Sitemap = projects.map((p) => ({
     url: `${baseUrl}/prosjekter/${p.slug}`,
     lastModified: staticLastMod,
-  }));
-
-  const blogUrls: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
-    url: `${baseUrl}/blogg/${post.slug}`,
-    lastModified: new Date(post.date),
   }));
 
   const comparisonUrls: MetadataRoute.Sitemap = getAllComparisons().map((c) => ({
@@ -42,14 +36,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/tjenester/nybygg`, lastModified: staticLastMod },
     { url: `${baseUrl}/tjenester/hasteoppdrag`, lastModified: staticLastMod },
     { url: `${baseUrl}/tjenester/pris`, lastModified: staticLastMod },
-    { url: `${baseUrl}/blogg`, lastModified: staticLastMod },
     { url: `${baseUrl}/sammenlign`, lastModified: staticLastMod },
     { url: `${baseUrl}/vilkar`, lastModified: staticLastMod },
     { url: `${baseUrl}/anmeldelser`, lastModified: staticLastMod },
     { url: `${baseUrl}/faq`, lastModified: staticLastMod },
     { url: `${baseUrl}/personvern`, lastModified: staticLastMod },
     ...projectUrls,
-    ...blogUrls,
     ...comparisonUrls,
     ...getAllLocationSlugs().map((slug) => ({
       url: `${baseUrl}/elektriker/${slug}`,

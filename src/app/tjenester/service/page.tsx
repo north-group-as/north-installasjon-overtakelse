@@ -4,7 +4,6 @@ import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { BUSINESS } from "@/lib/business-data";
-import { getPostsByKeywords } from "@/lib/blog";
 import {
   Zap,
   ShieldCheck,
@@ -326,38 +325,6 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
-
-      {/* Relaterte artikler */}
-      {(() => {
-        const relatedPosts = getPostsByKeywords(["sikringsskap", "service", "elektrisk"], 3);
-        if (relatedPosts.length === 0) return null;
-        return (
-          <section className="bg-gray-50 py-20 lg:py-28">
-            <div className="max-w-7xl mx-auto px-6 lg:px-10">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-navy-dark tracking-tight mb-10">
-                Nyttig å vite
-              </h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {relatedPosts.map((post) => (
-                  <Link key={post.slug} href={`/blogg/${post.slug}`} className="group">
-                    <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                      <div className="aspect-video relative">
-                        <Image src={post.image} alt={post.title} width={800} height={450} className="absolute inset-0 w-full h-full object-cover" sizes="(max-width: 768px) 100vw, 33vw" />
-                      </div>
-                      <div className="p-5">
-                        <h3 className="text-base font-bold text-navy-dark group-hover:text-teal-accent transition-colors mb-1">
-                          {post.title}
-                        </h3>
-                        <p className="text-sm text-navy-dark/60 line-clamp-2">{post.description}</p>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </section>
-        );
-      })()}
 
       <Footer />
     </main>
