@@ -1,5 +1,5 @@
 import { teamMembers } from "@/lib/team-data";
-import { generateVCard } from "@/lib/vcard";
+import { generateVCard, type VCardContact } from "@/lib/vcard";
 
 /**
  * Gjenskaper den gamle WordPress-adressen for visittkort-QR-koder som
@@ -20,10 +20,7 @@ const LEGACY_NAME_TO_SLUG: Record<string, string> = {
   samy: "samy-adolfsen",
 };
 
-const LEGACY_ONLY_CONTACTS: Record<
-  string,
-  { name: string; role: string; phone: string; email: string }
-> = {
+const LEGACY_ONLY_CONTACTS: Record<string, VCardContact> = {
   tobias: {
     name: "Tobias Ødegaard",
     role: "Elektromontør",
@@ -38,27 +35,6 @@ const LEGACY_ONLY_CONTACTS: Record<
   },
 };
 
-function generateLegacyVCard(contact: {
-  name: string;
-  role: string;
-  phone: string;
-  email: string;
-}): string {
-  const [first, ...rest] = contact.name.split(" ");
-  const last = rest.join(" ");
-  return [
-    "BEGIN:VCARD",
-    "VERSION:3.0",
-    `N:${last};${first};;;`,
-    `FN:${contact.name}`,
-    "ORG:North Installasjon AS",
-    `TITLE:${contact.role}`,
-    `TEL;TYPE=WORK,VOICE:${contact.phone}`,
-    `EMAIL;TYPE=WORK:${contact.email}`,
-    "END:VCARD",
-  ].join("\r\n");
-}
-
 export async function GET(
   _req: Request,
   { params }: { params: Promise<{ file: string }> }
@@ -68,17 +44,13 @@ export async function GET(
 
   const slug = LEGACY_NAME_TO_SLUG[legacyName];
   const member = slug ? teamMembers.find((m) => m.slug === slug) : undefined;
-  const legacyOnly = LEGACY_ONLY_CONTACTS[legacyName];
+  const contact = member ?? LEGACY_ONLY_CONTACTS[legacyName];
 
-  const vcard = member
-    ? generateVCard(member)
-    : legacyOnly
-      ? generateLegacyVCard(legacyOnly)
-      : null;
-
-  if (!vcard) {
+  if (!contact) {
     return new Response("Fant ikke kontakt", { status: 404 });
   }
+
+  const vcard = generateVCard(contact);
 
   return new Response(vcard, {
     status: 200,
