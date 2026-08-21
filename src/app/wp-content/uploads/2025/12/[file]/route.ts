@@ -1,5 +1,5 @@
-import { teamMembers } from "@/lib/team-data";
-import { generateVCard, type VCardContact } from "@/lib/vcard";
+import { findContactBySlug } from "@/lib/contacts-data";
+import { generateVCard } from "@/lib/vcard";
 
 /**
  * Gjenskaper den gamle WordPress-adressen for visittkort-QR-koder som
@@ -10,29 +10,15 @@ import { generateVCard, type VCardContact } from "@/lib/vcard";
  * /wp-content/uploads/2025/12/*, siden Vercel som standard blokkerer
  * /wp-content/-forespørsler (kjent WordPress-angrepsmønster).
  *
- * Legg til flere ansatte som er på det offentlige teamet (team-data.ts)
- * ved å utvide LEGACY_NAME_TO_SLUG. Ansatte som ikke skal vises på
- * "Om oss"-siden, men som trenger en fungerende vCard-QR-kode, legges
- * i LEGACY_ONLY_CONTACTS i stedet.
+ * Nye visittkort bør heller bruke /kontakt/<slug>/qr, som koder
+ * vCard-innholdet direkte inn i QR-bildet. Denne ruten er kun for de
+ * QR-kodene som allerede er trykket opp.
  */
 const LEGACY_NAME_TO_SLUG: Record<string, string> = {
   eirik: "eirik-justra",
   samy: "samy-adolfsen",
-};
-
-const LEGACY_ONLY_CONTACTS: Record<string, VCardContact> = {
-  tobias: {
-    name: "Tobias Ødegaard",
-    role: "Elektromontør",
-    phone: "+4797271916",
-    email: "tobias@northinstallasjon.no",
-  },
-  audun: {
-    name: "Audun Vagleng",
-    role: "Elektromontør",
-    phone: "+4740511451",
-    email: "audun@northinstallasjon.no",
-  },
+  tobias: "tobias-odegaard",
+  audun: "audun-vagleng",
 };
 
 export async function GET(
@@ -41,18 +27,14 @@ export async function GET(
 ) {
   const { file } = await params;
   const legacyName = file.replace(/\.vcf$/i, "").toLowerCase();
-
   const slug = LEGACY_NAME_TO_SLUG[legacyName];
-  const member = slug ? teamMembers.find((m) => m.slug === slug) : undefined;
-  const contact = member ?? LEGACY_ONLY_CONTACTS[legacyName];
+  const contact = slug ? findContactBySlug(slug) : undefined;
 
   if (!contact) {
     return new Response("Fant ikke kontakt", { status: 404 });
   }
 
-  const vcard = generateVCard(contact);
-
-  return new Response(vcard, {
+  return new Response(generateVCard(contact), {
     status: 200,
     headers: {
       "Content-Type": "text/vcard; charset=utf-8",
