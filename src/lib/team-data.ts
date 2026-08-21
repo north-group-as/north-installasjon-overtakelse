@@ -37,13 +37,13 @@ export const teamMembers: TeamMember[] = [
     bio: "Martin Ekholdt Iversen er faglig ansvarlig i North Installasjon. Han er utdannet elektriker, har teknisk fagskole innen elkraft og fullførte installatørutdanningen i 2024. Med erfaring som montør, serviceleder og faglig ansvarlig har Martin opparbeidet seg solid kompetanse innen både praktisk utførelse, prosjektoppfølging og faglig ledelse. Han sørger for at arbeidet vårt holder høy kvalitet, gjennomføres på en trygg måte og er i samsvar med gjeldende regelverk.",
   },
   {
-    name: "Eirik Sælør",
-    slug: "eirik-saelor",
+    name: "Eirik Justra",
+    slug: "eirik-justra",
     role: "Avdelingsleder",
-    image: "/images/team/eirik-saelor.webp",
+    image: "/images/team/eirik-justra.webp",
     email: "eirik@northinstallasjon.no",
     phone: "+47 960 07 127",
-    bio: "Eirik Sælør, vår ekstraordinære leder med mange år som profesjonell wrestler i utlandet. Han bringer enestående utholdenhet, effektivitet og teamånd til vårt team. Eirik løser komplekse problemer med letthet og inspirerer oss alle til suksess. Hans lidenskap for mennesker og utfordringer gir ham en unik tilnærming til arbeidet.",
+    bio: "Eirik Justra, vår ekstraordinære leder med mange år som profesjonell wrestler i utlandet. Han bringer enestående utholdenhet, effektivitet og teamånd til vårt team. Eirik løser komplekse problemer med letthet og inspirerer oss alle til suksess. Hans lidenskap for mennesker og utfordringer gir ham en unik tilnærming til arbeidet.",
   },
   {
     name: "Ivo Myhre",
