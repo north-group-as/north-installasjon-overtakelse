@@ -17,10 +17,10 @@ export function generateVCard(member: VCardContact): string {
     `FN:${member.name}`,
     "ORG:North Installasjon AS",
     `TITLE:${member.role}`,
-    `TEL;TYPE=WORK,VOICE:${member.phone.replace(/\s/g, "")}`,
-    `EMAIL;TYPE=WORK:${member.email}`,
-    `URL;TYPE=WORK:${BUSINESS.siteUrl}`,
-    `ADR;TYPE=WORK:;;${BUSINESS.address.street};${BUSINESS.address.city};${BUSINESS.address.region};${BUSINESS.address.postalCode};${BUSINESS.address.country}`,
+    `TEL;VOICE:${member.phone.replace(/\s/g, "")}`,
+    `EMAIL:${member.email}`,
+    `URL:${BUSINESS.siteUrl}`,
+    `ADR:;;${BUSINESS.address.street};${BUSINESS.address.city};${BUSINESS.address.region};${BUSINESS.address.postalCode};${BUSINESS.address.country}`,
     "END:VCARD",
   ].join("\r\n");
 }
