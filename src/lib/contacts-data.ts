@@ -9,15 +9,33 @@ import type { VCardContact } from "./vcard";
 const NON_PUBLIC_CONTACTS: Record<string, VCardContact> = {
   "tobias-odegaard": {
     name: "Tobias Ødegaard",
-    role: "Elektromontør",
+    role: "Montør",
     phone: "+4797271916",
     email: "tobias@northinstallasjon.no",
   },
   "audun-vagleng": {
-    name: "Audun Vagleng",
-    role: "Elektromontør",
+    name: "Audun Wasmuth Vagleng",
+    role: "Montør",
     phone: "+4740511451",
     email: "audun@northinstallasjon.no",
+  },
+  "kristian-welle": {
+    name: "Kristian Welle",
+    role: "Montør",
+    phone: "+4799085037",
+    email: "kristian@northinstallasjon.no",
+  },
+  "hector-chirinos": {
+    name: "Hector Chirinos",
+    role: "Montør",
+    phone: "+4797291249",
+    email: "hector@northinstallasjon.no",
+  },
+  "lowrens-rosinelli": {
+    name: "Lowrens Rosinelli",
+    role: "Serviceleder",
+    phone: "+4794014708",
+    email: "lowrens@northinstallasjon.no",
   },
 };
 
