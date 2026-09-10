@@ -16,7 +16,7 @@ export function generateVCard(member: VCardContact): string {
     `N:${last};${first};;;`,
     `FN:${member.name}`,
     "ORG:North Installasjon AS",
-    `TITLE:${member.role}`,
+    ...(member.role ? [`TITLE:${member.role}`] : []),
     `TEL;VOICE:${member.phone.replace(/\s/g, "")}`,
     `EMAIL:${member.email}`,
     `URL:${BUSINESS.siteUrl}`,

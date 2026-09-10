@@ -64,13 +64,13 @@ export const teamMembers: TeamMember[] = [
     bio: "Som driftskoordinator i North Group har Samy ansvar for å sikre at logistikken for oss og våre kunder flyter effektivt. Dette inkluderer blant annet behov for bolig, arbeidsklær, verktøy og annet logistikkrelatert utstyr. Samy har et operativt og løsningsorientert fokus, og jobber tett med alle ledd i organisasjonen for å sikre god flyt i leveranser og behov. Han har en bakgrunn fra internasjonal idrett, hvor han har tilegnet seg verdifull erfaring med presisjon, struktur og raske beslutningsprosesser.",
   },
   {
-    name: "Katarzyna Kubacka",
-    slug: "katarzyna-kubacka",
-    role: "Økonomikonsulent",
-    image: "/images/team/katarzyna-kubacka.webp",
+    name: "Økonomi",
+    slug: "okonomi",
+    role: "",
+    image: "/images/team/okonomi.webp",
     email: "regnskap@northgroup.no",
     phone: "+47 467 06 767",
-    bio: "Katarzyna Kubacka er økonomikonsulent i North Group, med ansvar for regnskapsføring, lønn, fakturering og økonomisk rapportering. Hun har en mastergrad i juss og er i sluttfasen av autorisasjonsløpet som statsautorisert regnskapsfører, med utdanning fra Handelshøyskolen BI. Med en solid kombinasjon av juridisk innsikt og regnskapsfaglig kompetanse har Katarzyna et sterkt fokus på regelverksetterlevelse, nøyaktig rapportering og kvalitetssikring av økonomiske prosesser.\n\nKatarzyna er kjent for sitt gode humør, positive innstilling og omtanke for kollegaene.",
+    bio: "",
   },
 ];
 

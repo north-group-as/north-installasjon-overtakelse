@@ -11,13 +11,14 @@ export default function TeamMemberModal({
   member: TeamMember;
 }) {
   const [open, setOpen] = useState(false);
+  const hasBio = member.bio.trim().length > 0;
 
   return (
     <>
       <div className="text-center">
         <div
-          className="cursor-pointer group"
-          onClick={() => setOpen(true)}
+          className={hasBio ? "cursor-pointer group" : undefined}
+          onClick={hasBio ? () => setOpen(true) : undefined}
         >
           <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-4">
             <Image
@@ -31,7 +32,9 @@ export default function TeamMemberModal({
             />
           </div>
           <h3 className="text-base font-bold text-white">{member.name}</h3>
-          <p className="text-sm text-white/70 mb-1">{member.role}</p>
+          {member.role && (
+            <p className="text-sm text-white/70 mb-1">{member.role}</p>
+          )}
           <p className="text-xs text-white/60 mb-3">{member.email}</p>
         </div>
 
@@ -61,16 +64,18 @@ export default function TeamMemberModal({
           >
             <Download className="w-4 h-4" />
           </a>
-          <button
-            onClick={() => setOpen(true)}
-            className="ml-1 text-xs text-teal-accent font-semibold hover:underline"
-          >
-            Les mer
-          </button>
+          {hasBio && (
+            <button
+              onClick={() => setOpen(true)}
+              className="ml-1 text-xs text-teal-accent font-semibold hover:underline"
+            >
+              Les mer
+            </button>
+          )}
         </div>
       </div>
 
-      {open && (
+      {open && hasBio && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           onClick={() => setOpen(false)}
