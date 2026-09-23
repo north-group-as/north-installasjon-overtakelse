@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/privacy-policy`, lastModified: staticLastMod },
     { url: `${baseUrl}/karriere`, lastModified: staticLastMod },
     { url: `${baseUrl}/jobb-med-oss`, lastModified: staticLastMod },
+    { url: `${baseUrl}/serviceelektriker`, lastModified: staticLastMod },
     { url: `${baseUrl}/kalkulator`, lastModified: staticLastMod },
     { url: `${baseUrl}/aktuelt`, lastModified: staticLastMod },
     { url: `${baseUrl}/tjenester/elbillader`, lastModified: staticLastMod },

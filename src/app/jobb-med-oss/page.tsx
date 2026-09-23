@@ -86,6 +86,22 @@ export default function JobbMedOssPage() {
         </div>
       </section>
 
+      {/* Aktiv stillingsannonse */}
+      <section className="bg-navy-dark py-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-white text-[15px]">
+            <span className="font-bold text-teal-accent">Ledig nå:</span>{" "}
+            Vi søker serviceelektriker til Oslo-området.
+          </p>
+          <a
+            href="/serviceelektriker"
+            className="bg-green text-navy-dark font-semibold px-6 py-3 rounded-xl hover:bg-green-dark transition-colors text-sm whitespace-nowrap"
+          >
+            Se stillingen og søk
+          </a>
+        </div>
+      </section>
+
       {/* Benefits */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
