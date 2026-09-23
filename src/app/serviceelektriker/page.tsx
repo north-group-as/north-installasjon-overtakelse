@@ -29,12 +29,12 @@ export default function ServiceElektrikerPage() {
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[420px] flex items-end overflow-hidden">
         <Image
-          src="/images/north-elektriker-arbeid-inne.webp"
-          alt="North Installasjon-elektriker i arbeid på byggeplass"
-          width={1500}
-          height={2000}
+          src="/images/north-team-ute-kontorbygg.webp"
+          alt="To serviceelektrikere fra North Installasjon utenfor et næringsbygg"
+          width={1200}
+          height={1600}
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: "center 25%" }}
+          style={{ objectPosition: "center 20%" }}
           priority
           sizes="100vw"
           quality={85}
