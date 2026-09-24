@@ -3,6 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import TrustBar from "@/components/sections/TrustBar";
+import RecruitmentBanner from "@/components/sections/RecruitmentBanner";
 import Services from "@/components/sections/Services";
 import NewsPreview from "@/components/sections/NewsPreview";
 import About from "@/components/sections/About";
@@ -40,6 +41,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TrustBar />
+      <RecruitmentBanner />
       <FadeIn>
         <Services />
       </FadeIn>
