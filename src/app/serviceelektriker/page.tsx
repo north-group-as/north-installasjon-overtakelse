@@ -3,12 +3,14 @@ import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ApplicationForm from "./ApplicationForm";
+import TeamSlider from "./TeamSlider";
 import {
   jobIntro,
   aboutRole,
   requirements,
   offers,
   roleHighlights,
+  teamPhotos,
 } from "@/lib/service-elektriker-data";
 import { CheckCircle2 } from "lucide-react";
 
@@ -150,7 +152,14 @@ export default function ServiceElektrikerPage() {
               Klar for å bli vår neste serviceelektriker?
             </h2>
           </div>
-          <ApplicationForm />
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-8 lg:gap-10 items-stretch">
+            <div className="aspect-[4/3] lg:aspect-auto">
+              <TeamSlider photos={teamPhotos} />
+            </div>
+            <div>
+              <ApplicationForm />
+            </div>
+          </div>
         </div>
       </section>
 

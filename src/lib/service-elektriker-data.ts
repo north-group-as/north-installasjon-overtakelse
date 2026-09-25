@@ -53,3 +53,47 @@ export const roleHighlights = [
   { icon: Zap, text: "Service og feilsøking hos private og bedrifter" },
   { icon: Car, text: "Bil og utstyr fra bedriften" },
 ];
+
+export interface TeamPhoto {
+  src: string;
+  alt: string;
+}
+
+export const teamPhotos: TeamPhoto[] = [
+  {
+    src: "/images/north-team-showroom-gruppe.webp",
+    alt: "Tre elektrikere fra North Installasjon foran en bil i et showroom",
+  },
+  {
+    src: "/images/north-team-montering-showroom.webp",
+    alt: "Elektrikere fra North Installasjon monterer belysning fra en lift i et showroom",
+  },
+  {
+    src: "/images/north-elektriker-hovedtavle.webp",
+    alt: "Elektriker fra North Installasjon jobber ved et hovedfordelingsskap i et teknisk rom",
+  },
+  {
+    src: "/images/about-team-byggeplass.webp",
+    alt: "To elektrikere fra North Installasjon ved servicebilen på en byggeplass",
+  },
+  {
+    src: "/images/north-team-befaring-byggeplass.webp",
+    alt: "Elektriker fra North Installasjon forklarer løsninger til byggherre på befaring",
+  },
+  {
+    src: "/images/team-arbeidsmiljo.webp",
+    alt: "Smilende elektriker fra North Installasjon gir tommel opp i en ferdig leilighet",
+  },
+  {
+    src: "/images/north-team-planlegging-naering.webp",
+    alt: "Elektriker fra North Installasjon går gjennom tegninger med to håndverkere",
+  },
+  {
+    src: "/images/north-elektriker-arbeid-inne.webp",
+    alt: "Elektriker fra North Installasjon jobber med installasjon i et rom under oppussing",
+  },
+  {
+    src: "/images/north-team-diskusjon-naering.webp",
+    alt: "Elektrikere fra North Installasjon diskuterer løsninger på et næringsbygg",
+  },
+];
