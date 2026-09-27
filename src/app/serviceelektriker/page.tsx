@@ -43,21 +43,20 @@ export default function ServiceElektrikerPage() {
       <main className="bg-white pb-20 md:pb-0">
         <Navbar />
 
-        {/* Hero - CTA above the fold */}
-        <section className="relative bg-navy-dark overflow-hidden md:pt-[72px] border-b-4 border-green">
-          <div className="absolute inset-0">
+        {/* Hero */}
+        <section className="bg-navy-dark md:pt-[72px] border-b-4 border-green">
+          <div className="pb-2 md:pb-3">
             <Image
               src="/images/north-banner-service-bygg.webp"
-              alt="North Installasjon: elektrisk service og bygginstallasjon, med elektrikere og servicebiler i et vinterlandskap"
-              fill
+              alt="North Installasjon: Hva gir deg energi? Vi søker fremtidsrettede servicemontører i Oslo"
+              width={2000}
+              height={586}
+              className="w-full h-auto"
               priority
               sizes="100vw"
-              className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/85 to-navy-dark/50" />
           </div>
-
-          <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-14 pb-16 md:pt-24 md:pb-28 min-h-[560px] md:min-h-[620px] flex flex-col justify-end">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-9 pb-12 md:pt-12 md:pb-16 border-t border-white/40">
             <p className="text-teal-accent text-xs md:text-sm font-semibold uppercase tracking-[0.22em] mb-4">
               {heroLabel}
             </p>
