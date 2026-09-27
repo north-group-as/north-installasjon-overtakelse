@@ -65,7 +65,7 @@ export default function JobbMedOssPage() {
           width={1920}
           height={1080}
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: "center 30%" }}
+          style={{ objectPosition: "center 18%" }}
           priority
           sizes="100vw"
           quality={85}
