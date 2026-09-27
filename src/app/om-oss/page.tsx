@@ -166,7 +166,7 @@ export default function OmOssPage() {
       </section>
 
       {/* Team */}
-      <section className="bg-navy-dark py-20 lg:py-28">
+      <section id="teamet" className="bg-navy-dark py-20 lg:py-28 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <p className="text-teal-accent text-sm font-semibold uppercase tracking-wider mb-4">
