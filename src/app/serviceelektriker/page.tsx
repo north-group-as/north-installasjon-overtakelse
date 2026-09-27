@@ -29,20 +29,17 @@ export default function ServiceElektrikerPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative h-[60vh] min-h-[420px] flex items-end overflow-hidden">
+      <section className="bg-navy-dark md:pt-[72px]">
         <Image
-          src="/images/north-team-ute-kontorbygg.webp"
-          alt="To serviceelektrikere fra North Installasjon utenfor et næringsbygg"
-          width={1200}
-          height={1600}
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: "center 20%" }}
+          src="/images/north-banner-service-bygg.webp"
+          alt="North Installasjon: elektrisk service og bygginstallasjon, med elektrikere og servicebiler i et vinterlandskap"
+          width={1471}
+          height={431}
+          className="w-full h-auto"
           priority
           sizes="100vw"
-          quality={85}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark via-navy-dark/60 to-navy-dark/20" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pb-16 w-full">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 md:py-16">
           <p className="text-teal-accent text-sm font-semibold uppercase tracking-[0.2em] mb-4">
             Ledig stilling
           </p>
