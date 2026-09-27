@@ -33,8 +33,8 @@ export default function ServiceElektrikerPage() {
         <Image
           src="/images/north-banner-service-bygg.webp"
           alt="North Installasjon: elektrisk service og bygginstallasjon, med elektrikere og servicebiler i et vinterlandskap"
-          width={1471}
-          height={431}
+          width={2000}
+          height={586}
           className="w-full h-auto"
           priority
           sizes="100vw"
