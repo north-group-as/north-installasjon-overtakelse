@@ -29,9 +29,10 @@ const STATUS_NEW_APPLICATION = "Ny søknad";
 
 export interface ServiceApplicationData {
   name: string;
-  email: string;
+  email?: string;
   phone: string;
   message?: string;
+  interestOnly?: boolean;
 }
 
 interface MondayApiResponse {
@@ -49,15 +50,23 @@ function buildColumnValues(data: ServiceApplicationData): string {
   const columns: Record<string, unknown> = {
     [COLUMN_IDS.status]: { label: STATUS_NEW_APPLICATION },
     [COLUMN_IDS.receivedDate]: { date: todayIsoDate() },
-    [COLUMN_IDS.email]: data.email,
     [COLUMN_IDS.phone]: {
       phone: data.phone.startsWith("+") ? data.phone : `+47${data.phone}`,
       countryShortName: "NO",
     },
   };
 
-  if (data.message) {
-    columns[COLUMN_IDS.message] = { text: data.message };
+  if (data.email) {
+    columns[COLUMN_IDS.email] = data.email;
+  }
+
+  const messageParts = [
+    data.interestOnly ? "Lavterskel interesse (uten CV) - ønsker uforpliktende prat." : null,
+    data.message || null,
+  ].filter(Boolean);
+
+  if (messageParts.length) {
+    columns[COLUMN_IDS.message] = { text: messageParts.join("\n\n") };
   }
 
   return JSON.stringify(columns);
@@ -72,7 +81,9 @@ export async function createServiceApplicationItem(
     throw new Error("Mangler MONDAY_API_KEY");
   }
 
-  const itemName = `${data.name} - Serviceelektriker`;
+  const itemName = data.interestOnly
+    ? `${data.name} - Nysgjerrig (serviceelektriker)`
+    : `${data.name} - Serviceelektriker`;
   const columnValues = buildColumnValues(data);
 
   const query = `

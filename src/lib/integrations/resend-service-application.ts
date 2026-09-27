@@ -15,7 +15,8 @@ function buildEmailHtml(data: ServiceApplicationData): string {
   const rows = [
     ["Navn", data.name],
     ["Telefon", data.phone],
-    ["E-post", data.email],
+    data.email ? ["E-post", data.email] : null,
+    data.interestOnly ? ["Type", "Lavterskel interesse (uten CV)"] : null,
     data.message ? ["Søknadstekst", data.message] : null,
   ]
     .filter(Boolean)
@@ -69,7 +70,9 @@ export async function sendServiceApplicationFallbackEmail(
   const { error } = await resend.emails.send({
     from: "North Nettside <no-reply@northinstallasjon.no>",
     to: FALLBACK_RECIPIENT,
-    subject: `Ny søknad, serviceelektriker - ${data.name}`,
+    subject: data.interestOnly
+      ? `Nysgjerrig kandidat, serviceelektriker - ${data.name}`
+      : `Ny søknad, serviceelektriker - ${data.name}`,
     html: buildEmailHtml(data),
     attachments: cv ? [{ filename: cv.filename, content: cv.content }] : undefined,
   });

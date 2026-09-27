@@ -24,47 +24,56 @@ export async function POST(request: Request) {
   const email = (formData.get("email") as string) || "";
   const phone = (formData.get("phone") as string) || "";
   const message = (formData.get("message") as string) || "";
+  const interestOnly = (formData.get("interestOnly") as string) === "true";
 
-  if (!name || !email || !phone) {
+  if (!name || !phone) {
     return NextResponse.json(
-      { error: "Mangler påkrevde felt: navn, e-post, telefon" },
+      { error: "Mangler påkrevde felt: navn, telefon" },
       { status: 400 }
     );
   }
 
   const cvEntry = formData.get("cv");
-  if (!(cvEntry instanceof File) || cvEntry.size === 0) {
+  const hasCv = cvEntry instanceof File && cvEntry.size > 0;
+
+  if (!interestOnly && !hasCv) {
     return NextResponse.json({ error: "CV mangler" }, { status: 400 });
   }
-  const cv = {
-    filename: cvEntry.name,
-    content: Buffer.from(await cvEntry.arrayBuffer()),
-  };
+
+  const cv = hasCv
+    ? {
+        filename: (cvEntry as File).name,
+        content: Buffer.from(await (cvEntry as File).arrayBuffer()),
+      }
+    : undefined;
 
   const applicationData: ServiceApplicationData = {
     name,
-    email,
+    email: email || undefined,
     phone,
     message: message || undefined,
+    interestOnly,
   };
 
   // Prøv å opprette søknaden i Monday. Hvis det feiler, skal søknaden
   // likevel ikke gå tapt - fall tilbake til e-post.
   try {
     const itemId = await createServiceApplicationItem(applicationData);
-    try {
-      await uploadCvToApplication(itemId, cv);
-    } catch (err) {
-      console.error("[service-elektriker-soknad] CV-opplasting feilet:", err);
-      // Selve søknaden er allerede opprettet i Monday, så vi sender ikke
-      // fallback-e-post for dette alene - men CV-en må ettersendes manuelt.
+    if (cv) {
       try {
-        await sendServiceApplicationFallbackEmail(applicationData, cv);
-      } catch (emailErr) {
-        console.error(
-          "[service-elektriker-soknad] Fallback-e-post for CV feilet også:",
-          emailErr
-        );
+        await uploadCvToApplication(itemId, cv);
+      } catch (err) {
+        console.error("[service-elektriker-soknad] CV-opplasting feilet:", err);
+        // Selve søknaden er allerede opprettet i Monday, så vi sender ikke
+        // fallback-e-post for dette alene - men CV-en må ettersendes manuelt.
+        try {
+          await sendServiceApplicationFallbackEmail(applicationData, cv);
+        } catch (emailErr) {
+          console.error(
+            "[service-elektriker-soknad] Fallback-e-post for CV feilet også:",
+            emailErr
+          );
+        }
       }
     }
   } catch (err) {
