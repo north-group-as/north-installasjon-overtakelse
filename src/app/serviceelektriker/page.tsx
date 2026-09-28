@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import FadeIn from "@/components/ui/FadeIn";
@@ -45,18 +44,7 @@ export default function ServiceElektrikerPage() {
 
         {/* Hero */}
         <section className="bg-navy-dark md:pt-[72px] border-b-4 border-green">
-          <div className="pb-2 md:pb-3">
-            <Image
-              src="/images/north-banner-service-bygg.webp"
-              alt="North Installasjon: Hva gir deg energi? Vi søker fremtidsrettede servicemontører i Oslo"
-              width={2000}
-              height={586}
-              className="w-full h-auto"
-              priority
-              sizes="100vw"
-            />
-          </div>
-          <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-9 pb-12 md:pt-12 md:pb-16 border-t border-white/40">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-12 md:pt-20 md:pb-16">
             <p className="text-teal-accent text-xs md:text-sm font-semibold uppercase tracking-[0.22em] mb-4">
               {heroLabel}
             </p>
