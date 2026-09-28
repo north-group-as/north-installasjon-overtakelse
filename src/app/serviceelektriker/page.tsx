@@ -8,6 +8,7 @@ import InterestModalProvider from "./InterestModalProvider";
 import OpenInterestButton from "./OpenInterestButton";
 import StickyApplyCta from "./StickyApplyCta";
 import ElectricPattern from "./ElectricPattern";
+import HeroLineArt from "./HeroLineArt";
 import {
   heroLabel,
   heroHeadline,
@@ -43,8 +44,9 @@ export default function ServiceElektrikerPage() {
         <Navbar />
 
         {/* Hero */}
-        <section className="bg-navy-dark md:pt-[72px] border-b-4 border-green">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-12 md:pt-20 md:pb-16">
+        <section className="relative overflow-hidden bg-navy-dark md:pt-[72px] border-b-4 border-green">
+          <HeroLineArt />
+          <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-12 md:pt-20 md:pb-16">
             <p className="text-teal-accent text-xs md:text-sm font-semibold uppercase tracking-[0.22em] mb-4">
               {heroLabel}
             </p>
