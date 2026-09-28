@@ -135,6 +135,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/jobb-med-oss" className="hover:text-white transition-colors">
+                  Jobb med oss
+                </Link>
+              </li>
+              <li>
                 <Link href="/kontakt" className="hover:text-white transition-colors">
                   Kontakt oss
                 </Link>
