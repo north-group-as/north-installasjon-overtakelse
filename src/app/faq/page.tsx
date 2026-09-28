@@ -35,7 +35,7 @@ const categories = [
       {
         question: "Hva koster installasjon av elbillader?",
         answer:
-          "Prisen varierer etter boligtype og kabelavstand. For en enebolig eller leilighet med kort kabelavstand starter prisen fra ca. 3 000-5 000 kr ekskl. mva for selve installasjonen. For borettslag og sameie gjelder egne priser. Kontakt oss for et konkret tilbud.",
+          "Prisen varierer etter boligtype og kabelavstand. For en enebolig eller leilighet med kort kabelavstand starter prisen fra 10 299 kr ekskl. mva for selve installasjonen. For borettslag og sameie gjelder egne priser. Kontakt oss for et konkret tilbud.",
         links: [{ label: "Mer om elbillader", href: "/tjenester/elbillader" }],
       },
       {
