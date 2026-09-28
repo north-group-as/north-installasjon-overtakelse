@@ -9,6 +9,7 @@ import OpenInterestButton from "./OpenInterestButton";
 import StickyApplyCta from "./StickyApplyCta";
 import ElectricPattern from "./ElectricPattern";
 import HeroLineArt from "./HeroLineArt";
+import MondayLineArt from "./MondayLineArt";
 import {
   heroLabel,
   heroHeadline,
@@ -81,8 +82,9 @@ export default function ServiceElektrikerPage() {
         </div>
 
         {/* Gleder du deg til mandag? */}
-        <section className="bg-navy-dark py-24 md:py-32">
-          <div className="max-w-3xl mx-auto px-6 text-center space-y-5 md:space-y-7">
+        <section className="relative overflow-hidden bg-navy-dark py-24 md:py-32">
+          <MondayLineArt />
+          <div className="relative max-w-3xl mx-auto px-6 text-center space-y-5 md:space-y-7">
             {mondayStatementLines.map((line, i) => {
               const isLast = i === mondayStatementLines.length - 1;
               return (
