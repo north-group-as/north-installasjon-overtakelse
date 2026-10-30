@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, UserRound } from "lucide-react";
 import { BUSINESS } from "@/lib/business-data";
 
 const EMPLOYEE_PORTAL_URL = "https://ansatt.northinstallasjon.no";
@@ -65,22 +65,25 @@ export default function Navbar() {
             <a
               href={BUSINESS.phoneHref}
               aria-label={`Ring ${BUSINESS.phoneDisplay}`}
-              className="flex items-center gap-2.5 bg-green text-white px-5 py-2 rounded-full shadow-lg shadow-green/25 hover:bg-green-dark hover:shadow-green/40 transition-all"
+              className="flex items-center gap-2.5 bg-white/10 border border-white/20 text-white px-5 py-2 rounded-full hover:bg-white/15 transition-colors"
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5 text-green" />
               <span className="font-extrabold text-lg">{BUSINESS.phoneDisplay}</span>
             </a>
             <Link
               href="/kontakt"
-              className="border-2 border-white/20 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm"
+              className="bg-green text-white px-5 py-2.5 rounded-lg font-semibold shadow-lg shadow-green/25 hover:bg-green-dark hover:shadow-green/40 transition-all text-sm"
             >
               Bestill befaring
             </Link>
             <a
               href={EMPLOYEE_PORTAL_URL}
-              className="inline-flex items-center justify-center min-h-[44px] px-4 rounded-lg bg-[#0A7997] text-white font-bold text-sm whitespace-nowrap hover:brightness-110 transition"
+              className="inline-flex items-center justify-center gap-2 min-h-[44px] pl-2 pr-4 rounded-lg bg-[#0A7997] text-white font-bold text-sm whitespace-nowrap hover:brightness-110 transition"
             >
-              For ansatte
+              <span className="flex items-center justify-center w-7 h-7 rounded-full bg-white/20 ring-1 ring-white/40">
+                <UserRound className="w-4 h-4" aria-hidden="true" />
+              </span>
+              Ansattportal
             </a>
           </div>
 
@@ -129,9 +132,12 @@ export default function Navbar() {
           </a>
           <a
             href={EMPLOYEE_PORTAL_URL}
-            className="inline-flex items-center justify-center min-h-[44px] px-5 rounded-lg bg-[#0A7997] text-white font-bold"
+            className="inline-flex items-center justify-center gap-2.5 min-h-[44px] px-5 rounded-lg bg-[#0A7997] text-white font-bold"
           >
-            For ansatte
+            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 ring-1 ring-white/40">
+              <UserRound className="w-5 h-5" aria-hidden="true" />
+            </span>
+            Ansattportal
           </a>
         </div>
 
