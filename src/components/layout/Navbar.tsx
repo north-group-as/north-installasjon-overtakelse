@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, UserRound } from "lucide-react";
 import { BUSINESS } from "@/lib/business-data";
 
 const EMPLOYEE_PORTAL_URL = "https://ansatt.northinstallasjon.no";
@@ -78,9 +78,12 @@ export default function Navbar() {
             </Link>
             <a
               href={EMPLOYEE_PORTAL_URL}
-              className="inline-flex items-center justify-center min-h-[44px] px-4 rounded-lg bg-[#0A7997] text-white font-bold text-sm whitespace-nowrap hover:brightness-110 transition"
+              className="inline-flex items-center justify-center gap-2 min-h-[44px] pl-2 pr-4 rounded-lg bg-[#0A7997] text-white font-bold text-sm whitespace-nowrap hover:brightness-110 transition"
             >
-              For ansatte
+              <span className="flex items-center justify-center w-7 h-7 rounded-full bg-white/20 ring-1 ring-white/40">
+                <UserRound className="w-4 h-4" aria-hidden="true" />
+              </span>
+              Ansattportal
             </a>
           </div>
 
@@ -129,9 +132,12 @@ export default function Navbar() {
           </a>
           <a
             href={EMPLOYEE_PORTAL_URL}
-            className="inline-flex items-center justify-center min-h-[44px] px-5 rounded-lg bg-[#0A7997] text-white font-bold"
+            className="inline-flex items-center justify-center gap-2.5 min-h-[44px] px-5 rounded-lg bg-[#0A7997] text-white font-bold"
           >
-            For ansatte
+            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 ring-1 ring-white/40">
+              <UserRound className="w-5 h-5" aria-hidden="true" />
+            </span>
+            Ansattportal
           </a>
         </div>
 
