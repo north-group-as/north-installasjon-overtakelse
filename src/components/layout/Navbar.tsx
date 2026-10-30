@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Menu, X, Phone } from "lucide-react";
 import { BUSINESS } from "@/lib/business-data";
 
+const EMPLOYEE_PORTAL_URL = "https://ansatt.northinstallasjon.no";
+
 const navLinks = [
   { label: "Tjenester", href: "/tjenester" },
   { label: "Prosjekter", href: "/prosjekter" },
@@ -50,7 +52,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8 text-[15px]">
+          <div className="hidden md:flex items-center gap-6 text-[15px]">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -74,6 +76,12 @@ export default function Navbar() {
             >
               Bestill befaring
             </Link>
+            <a
+              href={EMPLOYEE_PORTAL_URL}
+              className="inline-flex items-center justify-center min-h-[44px] px-4 rounded-lg bg-[#0A7997] text-white font-bold text-sm whitespace-nowrap hover:brightness-110 transition"
+            >
+              For ansatte
+            </a>
           </div>
 
           {/* Mobile hamburger button */}
@@ -118,6 +126,12 @@ export default function Navbar() {
           >
             <Phone className="w-5 h-5" />
             <span className="text-lg">{BUSINESS.phoneDisplay}</span>
+          </a>
+          <a
+            href={EMPLOYEE_PORTAL_URL}
+            className="inline-flex items-center justify-center min-h-[44px] px-5 rounded-lg bg-[#0A7997] text-white font-bold"
+          >
+            For ansatte
           </a>
         </div>
 
