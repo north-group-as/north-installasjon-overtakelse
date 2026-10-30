@@ -65,14 +65,14 @@ export default function Navbar() {
             <a
               href={BUSINESS.phoneHref}
               aria-label={`Ring ${BUSINESS.phoneDisplay}`}
-              className="flex items-center gap-2.5 bg-green text-white px-5 py-2 rounded-full shadow-lg shadow-green/25 hover:bg-green-dark hover:shadow-green/40 transition-all"
+              className="flex items-center gap-2.5 bg-white/10 border border-white/20 text-white px-5 py-2 rounded-full hover:bg-white/15 transition-colors"
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5 text-green" />
               <span className="font-extrabold text-lg">{BUSINESS.phoneDisplay}</span>
             </a>
             <Link
               href="/kontakt"
-              className="border-2 border-white/20 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm"
+              className="bg-green text-white px-5 py-2.5 rounded-lg font-semibold shadow-lg shadow-green/25 hover:bg-green-dark hover:shadow-green/40 transition-all text-sm"
             >
               Bestill befaring
             </Link>
